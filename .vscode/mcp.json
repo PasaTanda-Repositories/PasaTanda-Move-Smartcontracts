@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"NAVI Protocol Developer Docs": {
+			"url": "https://naviprotocol.gitbook.io/navi-protocol-developer-docs/~gitbook/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
