@@ -1,5 +1,15 @@
 # PasaTanda Move Smart Contracts
 
+## 📦 Package Information
+
+**Package ID (Testnet):** `0xa48c115fbf1248c9413c3c655b7961bab694a57dd8b3961d4ba54b963c34058a`
+
+**Module:** `pasatanda_core`
+
+**Network:** Sui Testnet
+
+---
+
 ## 🏗️ Architecture Overview
 
 PasaTanda is a decentralized ROSCA (Rotating Savings and Credit Association) - known as "Tanda" in Latin America - implemented on Sui blockchain.
@@ -75,6 +85,33 @@ sui client call --package <PACKAGE_ID> --module pasatanda_core --function close_
   --args <tanda_id> <admin_cap_id> 0x6 \
   --gas-budget 30000000
 ```
+
+---
+
+
+
+## 🔐 Security Features
+
+1. **Immutable Participant Order:** Once created, the turn order cannot be modified
+2. **Turn Verification:** Only the correct participant can claim each round
+3. **Phase Management:** State transitions are strictly controlled
+4. **Admin Capability:** Protected administrative functions
+5. **Event Emission:** All important actions emit events for off-chain monitoring
+
+---
+
+## 📡 Events
+
+| Event | Description |
+|-------|-------------|
+| `TandaCreated` | New tanda initialized |
+| `GuaranteeDeposited` | Participant paid guarantee |
+| `PaymentDeposited` | Round contribution received |
+| `PayoutExecuted` | Pool distributed to winner |
+| `FiatWithdrawalRequested` | Fiat payout requested (for backend) |
+| `RoundAdvanced` | Round counter incremented |
+| `PhaseChanged` | Tanda state transition |
+| `TandaClosed` | Tanda finalized |
 
 ---
 
